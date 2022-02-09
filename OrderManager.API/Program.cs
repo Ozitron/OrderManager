@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using OrderManager.Core.Repositories;
 using OrderManager.Infrastructure;
+using OrderManager.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

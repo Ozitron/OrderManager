@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OrderManager.Core.Entities;
-using OrderManager.Core.Repositories;
+using OrderManager.Core.Models.DTOs;
+using OrderManager.Infrastructure.Repositories;
 
 namespace OrderManager.API.Controllers
 {
@@ -21,6 +22,18 @@ namespace OrderManager.API.Controllers
             var result = await _orderRepository.GetOrderAsync(id);
 
             return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(OrderCreateDto orderCreateDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var orderId = await _orderRepository.CreateOrderAsync(orderCreateDto);
+            return Ok(new { message = $"Records is successfully created for order {orderId}" });
         }
     }
 }

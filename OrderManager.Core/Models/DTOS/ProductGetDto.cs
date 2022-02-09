@@ -1,6 +1,6 @@
-﻿namespace OrderManager.Core.Models
+﻿namespace OrderManager.Core.Models.DTOs
 {
-    public class ProductGetModel
+    public class ProductGetDto
     {
         public string ProductType { get; set; }
 

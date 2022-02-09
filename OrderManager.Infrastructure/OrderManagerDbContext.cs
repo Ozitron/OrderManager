@@ -9,9 +9,9 @@ namespace OrderManager.Infrastructure
         {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> ProductTypes { get; set; }
 
-        public DbSet<Order?> Orders { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderProduct> OrderProducts { get; set; }
     }

@@ -1,12 +1,11 @@
-﻿using OrderManager.Core.Entities;
-using OrderManager.Core.Models;
+﻿using OrderManager.Core.Models.DTOs;
 
-namespace OrderManager.Core.Repositories
+namespace OrderManager.Infrastructure.Repositories
 {
     public interface IOrderRepository
     {
-        Task<long> CreateOrderAsync(OrderCreateDto order);
+        Task<int> CreateOrderAsync(OrderCreateDto order);
 
-        Task<Order?> GetOrderAsync(long id);
+        Task<OrderGetDto> GetOrderAsync(int id);
     }
 }
