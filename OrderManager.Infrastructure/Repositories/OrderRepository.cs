@@ -45,7 +45,6 @@ namespace OrderManager.Infrastructure.Repositories
             }
             catch
             {
-                //throw new AppException();
                 throw new Exception();
             }
         }

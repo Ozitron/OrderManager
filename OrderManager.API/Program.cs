@@ -1,8 +1,16 @@
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using OrderManager.Core.Validators;
 using OrderManager.Infrastructure;
 using OrderManager.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers().AddFluentValidation(fv =>
+{
+    fv.RegisterValidatorsFromAssemblyContaining<OrderValidator>();
+});
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

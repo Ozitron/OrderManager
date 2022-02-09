@@ -19,6 +19,11 @@ namespace OrderManager.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetAsync(int id)
         {
+            if (id <= 0)
+            {
+                return BadRequest("OrderId is invalid. It must be greater than 0.");
+            }
+
             var result = await _orderRepository.GetOrderAsync(id);
 
             return Ok(result);
