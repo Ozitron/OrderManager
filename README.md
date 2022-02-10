@@ -6,7 +6,7 @@ In-memory database used in this application, OrderManager.API solution can be st
 Normalization rules are applied to the entities and data elements. \
 Sample products will be registered in-memory database on startup. Therefore only get methods is adeded for product service. Create, update methods are not implemented.
 
-# API Docunmatation
+# API Documentation
 Endpoints and explanations:
 
 **orders**\
