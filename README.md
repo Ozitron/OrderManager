@@ -2,7 +2,9 @@
 The project is a .Net Core Web API application and it is developed using C# .Net 6.0
 
 # About the Application
-In-memory database used in this application, OrderManager.API solution can be started directly
+In-memory database used in this application, OrderManager.API solution can be started directly.\
+Normalization rules are applied to the entities and data elements. \
+Sample products will be registered in-memory database on startup. Therefore only get methods is adeded for product service. Create, update methods are not implemented.
 
 # API Docunmatation
 Endpoints and explanations:
