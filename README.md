@@ -7,11 +7,11 @@ In-memory database used in this application, OrderManager.API solution can be st
 # API Docunmatation
 Endpoints and explanations:
 
-**orders**
+**orders**\
 -> **api/orders/{id}**  [HttpGet] method will return selected orders requiredBinWidth and related products and it's quantities as a list.\
 -> **api/orders**   [HttpPost] will save a new order record
 
-**products**
+**products**\
 -> **api/products** [HttpGet] will return all products
 
 # How to test API methods
