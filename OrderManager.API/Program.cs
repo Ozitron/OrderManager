@@ -22,6 +22,7 @@ builder.Services.AddDbContext<OrderManagerDbContext>(options =>
 });
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
